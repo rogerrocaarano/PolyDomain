@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RosettaDomain.Core/RosettaDomain.Core.csproj" />
+  <Project Path="RosettaDomain.Tests/RosettaDomain.Tests.csproj" />
+</Solution>

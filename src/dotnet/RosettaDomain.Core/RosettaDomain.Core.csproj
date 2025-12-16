@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>Roger Roca Arano</Authors>
+    <Description>Base library (Seedwork) for Domain-Driven Design in .NET.</Description>
+    <Version>0.1.0</Version>
+    <PackageTags>DDD;Domain;Architecture;CleanArchitecture;C#</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/rogerrocaarano/RosettaDomain/blob/main/README.md</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rogerrocaarano/RosettaDomain</RepositoryUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+</Project>
