@@ -8,8 +8,8 @@
     <Version>0.1.0</Version>
     <PackageTags>DDD;Domain;Architecture;CleanArchitecture;C#</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/rogerrocaarano/RosettaDomain/blob/main/README.md</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/rogerrocaarano/RosettaDomain</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/rogerrocaarano/PolyDomain/blob/main/README.md</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rogerrocaarano/PolyDomain</RepositoryUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 </Project>
