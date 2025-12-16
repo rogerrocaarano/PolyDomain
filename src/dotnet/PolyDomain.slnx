@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PolyDomain.Core\PolyDomain.Core.csproj" />
+  <Project Path="PolyDomain.Tests\PolyDomain.Tests.csproj" />
+</Solution>

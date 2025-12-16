@@ -1,6 +1,6 @@
-# 🌐 RosettaDomain
+# 🌐 PolyDomain
 
-RosettaDomain is a cross-platform "Seedwork" library designed to standardize Domain-Driven Design (DDD) and Clean Architecture patterns across different technology stacks.
+PolyDomain is a cross-platform "Seedwork" library designed to standardize Domain-Driven Design (DDD) and Clean Architecture patterns across different technology stacks.
 
 This monorepo hosts unified implementations for .NET, Python, Kotlin, and TypeScript, ensuring architectural consistency across your entire ecosystem. Whether you are building a high-performance backend in C# or an AI service in Python, your domain modeling primitives will remain conceptually and linguistically aligned.
 
