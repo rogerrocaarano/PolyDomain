@@ -1,4 +1,4 @@
-namespace PolyDomain.Core.Abstractions;
+namespace PolyDomain.Abstractions.Primitives;
 
 /// <summary>
 /// Represents a significant event that occurred within the domain.

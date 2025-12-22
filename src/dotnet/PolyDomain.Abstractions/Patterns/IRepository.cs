@@ -1,4 +1,6 @@
-namespace PolyDomain.Core.Abstractions;
+using PolyDomain.Abstractions.Primitives;
+
+namespace PolyDomain.Abstractions.Patterns;
 
 /// <summary>
 /// Defines the standard contract for a repository in Domain-Driven Design.
@@ -6,33 +8,22 @@ namespace PolyDomain.Core.Abstractions;
 /// </summary>
 /// <typeparam name="TAggregate">The type of the aggregate root.</typeparam>
 /// <typeparam name="TId">The type of the aggregate's identifier.</typeparam>
-public interface IRepository<TAggregate, TId>
+public interface IRepository<TAggregate, in TId>
     where TAggregate : class, IAggregateRoot<TId>
 {
     /// <summary>
-    /// Gets the Unit of Work that manages the persistence lifecycle of this repository.
-    /// Allows the client to commit the transaction involving this repository.
+    /// Saves a new aggregate to the repository or upgrade an existing one.
     /// </summary>
-    IUnitOfWork UnitOfWork { get; }
-
-    /// <summary>
-    /// Adds a new aggregate to the repository.
-    /// This mimics adding an item to an in-memory collection (synchronous).
-    /// </summary>
-    /// <param name="aggregate">The aggregate to add.</param>
-    void Add(TAggregate aggregate);
-
-    /// <summary>
-    /// Updates an existing aggregate.
-    /// </summary>
-    /// <param name="aggregate">The aggregate to update.</param>
-    void Update(TAggregate aggregate);
+    /// <param name="aggregate">The aggregate to save.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    Task SaveAsync(TAggregate aggregate, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Removes an aggregate from the repository.
     /// </summary>
     /// <param name="aggregate">The aggregate to remove.</param>
-    void Remove(TAggregate aggregate);
+    /// <param name="cancellationToken">Cancellation token.</param>
+    Task RemoveAsync(TAggregate aggregate, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Retrieves an aggregate by its unique identifier (asynchronous I/O).

@@ -1,4 +1,4 @@
-using PolyDomain.Core.Abstractions;
+using PolyDomain.Abstractions.Primitives;
 using PolyDomain.Core.Primitives;
 
 namespace PolyDomain.Tests.Primitives;

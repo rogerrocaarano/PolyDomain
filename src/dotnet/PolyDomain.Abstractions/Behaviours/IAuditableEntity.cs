@@ -1,6 +1,4 @@
-namespace PolyDomain.Core.Abstractions;
-
-using System;
+namespace PolyDomain.Abstractions.Behaviours;
 
 /// <summary>
 /// Defines an entity that tracks creation and modification metadata.

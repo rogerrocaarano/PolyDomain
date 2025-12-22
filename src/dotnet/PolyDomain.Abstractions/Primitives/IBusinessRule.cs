@@ -1,4 +1,4 @@
-namespace PolyDomain.Core.Abstractions;
+namespace PolyDomain.Abstractions.Primitives;
 
 /// <summary>
 /// Defines a business rule that must be satisfied.

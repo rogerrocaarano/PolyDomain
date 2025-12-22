@@ -1,4 +1,6 @@
-namespace PolyDomain.Core.Abstractions;
+using PolyDomain.Abstractions.Behaviours;
+
+namespace PolyDomain.Abstractions.Primitives;
 
 /// <summary>
 /// Defines the contract for an Aggregate Root.

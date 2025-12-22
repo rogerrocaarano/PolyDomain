@@ -1,4 +1,4 @@
-namespace PolyDomain.Core.Abstractions;
+namespace PolyDomain.Abstractions.Primitives;
 
 /// <summary>
 /// Marker interface for Value Objects.

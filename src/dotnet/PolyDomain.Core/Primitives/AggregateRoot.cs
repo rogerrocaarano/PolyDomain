@@ -1,7 +1,8 @@
+using PolyDomain.Abstractions.Primitives;
+
 namespace PolyDomain.Core.Primitives;
 
 using System.Collections.Generic;
-using Abstractions;
 
 /// <summary>
 /// Base class for Aggregate Roots.

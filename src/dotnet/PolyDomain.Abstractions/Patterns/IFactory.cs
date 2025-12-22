@@ -1,4 +1,4 @@
-namespace PolyDomain.Core.Abstractions;
+namespace PolyDomain.Abstractions.Patterns;
 
 /// <summary>
 /// Defines the contract for a Factory in Domain-Driven Design.

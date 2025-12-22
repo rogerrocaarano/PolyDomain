@@ -1,12 +1,10 @@
-namespace PolyDomain.Core.Abstractions;
-
-using System;
+namespace PolyDomain.Abstractions.Behaviours;
 
 /// <summary>
 /// Defines an entity that supports "Soft Delete".
 /// Instead of being physically removed from the database, it is marked as deleted.
 /// </summary>
-public interface ISoftDelete
+public interface ISoftDeletable
 {
     /// <summary>
     /// Gets or sets a value indicating whether the entity has been deleted.

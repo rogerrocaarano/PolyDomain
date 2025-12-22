@@ -1,7 +1,4 @@
-namespace PolyDomain.Core.Abstractions;
-
-using System.Threading;
-using System.Threading.Tasks;
+namespace PolyDomain.Abstractions.Patterns;
 
 /// <summary>
 /// Defines the contract for the Unit of Work pattern.

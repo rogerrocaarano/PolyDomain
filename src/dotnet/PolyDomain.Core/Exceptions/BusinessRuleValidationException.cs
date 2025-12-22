@@ -1,3 +1,5 @@
+using PolyDomain.Abstractions.Primitives;
+
 namespace PolyDomain.Core.Exceptions;
 
 using Abstractions;

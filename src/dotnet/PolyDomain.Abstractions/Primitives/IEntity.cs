@@ -1,4 +1,4 @@
-namespace PolyDomain.Core.Abstractions;
+namespace PolyDomain.Abstractions.Primitives;
 
 /// <summary>
 /// Defines the contract for an Entity in Domain-Driven Design.

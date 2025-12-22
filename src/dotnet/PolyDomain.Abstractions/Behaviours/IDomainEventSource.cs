@@ -1,6 +1,6 @@
-namespace PolyDomain.Core.Abstractions;
+using PolyDomain.Abstractions.Primitives;
 
-using System.Collections.Generic;
+namespace PolyDomain.Abstractions.Behaviours;
 
 /// <summary>
 /// Defines a source of domain events.
