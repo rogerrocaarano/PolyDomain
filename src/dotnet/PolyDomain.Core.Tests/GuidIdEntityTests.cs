@@ -1,12 +1,12 @@
 using PolyDomain.Core.Primitives;
 
-namespace PolyDomain.Tests.Primitives;
+namespace PolyDomain.Core.Tests;
 
-public class StringIdEntityTests
+public class GuidIdEntityTests
 {
-    private class FakeEntity : Entity<string>
+    private class FakeEntity : Entity<Guid>
     {
-        public FakeEntity(string id)
+        public FakeEntity(Guid id)
             : base(id) { }
     }
 
@@ -14,8 +14,9 @@ public class StringIdEntityTests
     public void two_entities_with_same_id_should_be_equal()
     {
         // Arrange
-        var entity1 = new FakeEntity("entity-001");
-        var entity2 = new FakeEntity("entity-001");
+        var id = Guid.NewGuid();
+        var entity1 = new FakeEntity(id);
+        var entity2 = new FakeEntity(id);
 
         // Act
         bool result = entity1 == entity2;
@@ -28,8 +29,10 @@ public class StringIdEntityTests
     public void two_entities_with_different_id_should_not_be_equal()
     {
         // Arrange
-        var entity1 = new FakeEntity("entity-001");
-        var entity2 = new FakeEntity("entity-002");
+        var id1 = Guid.NewGuid();
+        var id2 = Guid.NewGuid();
+        var entity1 = new FakeEntity(id1);
+        var entity2 = new FakeEntity(id2);
 
         // Act
         bool result = entity1 == entity2;
@@ -42,7 +45,7 @@ public class StringIdEntityTests
     public void transient_entities_with_default_id_should_not_be_equal()
     {
         // Arrange
-        string id = null;
+        var id = Guid.Empty;
         var entity1 = new FakeEntity(id);
         var entity2 = new FakeEntity(id);
 
@@ -57,7 +60,7 @@ public class StringIdEntityTests
     public void entity_compared_to_null_should_be_false()
     {
         // Arrange
-        var entity = new FakeEntity("entity-001");
+        var entity = new FakeEntity(Guid.NewGuid());
 
         // Act & Assert
         Assert.False(entity == null);
@@ -69,7 +72,7 @@ public class StringIdEntityTests
     public void entities_with_same_id_should_have_same_hashcode()
     {
         // Arrange
-        var id = "entity-001";
+        var id = Guid.NewGuid();
         var entity1 = new FakeEntity(id);
         var entity2 = new FakeEntity(id);
 
@@ -81,8 +84,8 @@ public class StringIdEntityTests
     public void same_entity_instance_should_be_equal_to_itself()
     {
         // Arrange
-        var entity = new FakeEntity("entity-001");
-        var transientEntity = new FakeEntity(null);
+        var entity = new FakeEntity(Guid.NewGuid());
+        var transientEntity = new FakeEntity(Guid.Empty);
 
         // Act & Assert
         Assert.True(entity == entity);

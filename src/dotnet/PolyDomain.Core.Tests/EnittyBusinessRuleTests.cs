@@ -2,7 +2,7 @@ using PolyDomain.Abstractions.Primitives;
 using PolyDomain.Core.Exceptions;
 using PolyDomain.Core.Primitives;
 
-namespace PolyDomain.Tests.Primitives;
+namespace PolyDomain.Core.Tests;
 
 public class EntityBusinessRuleTests
 {

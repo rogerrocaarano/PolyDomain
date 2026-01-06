@@ -1,12 +1,12 @@
 using PolyDomain.Core.Primitives;
 
-namespace PolyDomain.Tests.Primitives;
+namespace PolyDomain.Core.Tests;
 
-public class IntIdEntityTests
+public class StringIdEntityTests
 {
-    private class FakeEntity : Entity<int>
+    private class FakeEntity : Entity<string>
     {
-        public FakeEntity(int id)
+        public FakeEntity(string id)
             : base(id) { }
     }
 
@@ -14,8 +14,8 @@ public class IntIdEntityTests
     public void two_entities_with_same_id_should_be_equal()
     {
         // Arrange
-        var entity1 = new FakeEntity(1);
-        var entity2 = new FakeEntity(1);
+        var entity1 = new FakeEntity("entity-001");
+        var entity2 = new FakeEntity("entity-001");
 
         // Act
         bool result = entity1 == entity2;
@@ -28,8 +28,8 @@ public class IntIdEntityTests
     public void two_entities_with_different_id_should_not_be_equal()
     {
         // Arrange
-        var entity1 = new FakeEntity(1);
-        var entity2 = new FakeEntity(2);
+        var entity1 = new FakeEntity("entity-001");
+        var entity2 = new FakeEntity("entity-002");
 
         // Act
         bool result = entity1 == entity2;
@@ -42,7 +42,7 @@ public class IntIdEntityTests
     public void transient_entities_with_default_id_should_not_be_equal()
     {
         // Arrange
-        var id = 0;
+        string id = null;
         var entity1 = new FakeEntity(id);
         var entity2 = new FakeEntity(id);
 
@@ -57,7 +57,7 @@ public class IntIdEntityTests
     public void entity_compared_to_null_should_be_false()
     {
         // Arrange
-        var entity = new FakeEntity(1);
+        var entity = new FakeEntity("entity-001");
 
         // Act & Assert
         Assert.False(entity == null);
@@ -69,7 +69,7 @@ public class IntIdEntityTests
     public void entities_with_same_id_should_have_same_hashcode()
     {
         // Arrange
-        var id = 1;
+        var id = "entity-001";
         var entity1 = new FakeEntity(id);
         var entity2 = new FakeEntity(id);
 
@@ -81,8 +81,8 @@ public class IntIdEntityTests
     public void same_entity_instance_should_be_equal_to_itself()
     {
         // Arrange
-        var entity = new FakeEntity(1);
-        var transientEntity = new FakeEntity(0);
+        var entity = new FakeEntity("entity-001");
+        var transientEntity = new FakeEntity(null);
 
         // Act & Assert
         Assert.True(entity == entity);
