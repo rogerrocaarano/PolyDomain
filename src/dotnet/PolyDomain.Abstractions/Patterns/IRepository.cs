@@ -22,8 +22,7 @@ public interface IRepository<TAggregate, in TId>
     /// Removes an aggregate from the repository.
     /// </summary>
     /// <param name="aggregate">The aggregate to remove.</param>
-    /// <param name="cancellationToken">Cancellation token.</param>
-    Task RemoveAsync(TAggregate aggregate, CancellationToken cancellationToken = default);
+    Task Remove(TAggregate aggregate);
 
     /// <summary>
     /// Retrieves an aggregate by its unique identifier (asynchronous I/O).

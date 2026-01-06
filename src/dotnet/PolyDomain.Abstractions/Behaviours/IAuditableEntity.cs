@@ -12,17 +12,7 @@ public interface IAuditableEntity
     DateTimeOffset CreatedOnUtc { get; set; }
 
     /// <summary>
-    /// Gets or sets the identifier of the user or system that created the entity.
-    /// </summary>
-    string? CreatedBy { get; set; }
-
-    /// <summary>
     /// Gets or sets the date and time in UTC when the entity was last modified.
     /// </summary>
     DateTimeOffset? ModifiedOnUtc { get; set; }
-
-    /// <summary>
-    /// Gets or sets the identifier of the user or system that last modified the entity.
-    /// </summary>
-    string? ModifiedBy { get; set; }
 }
