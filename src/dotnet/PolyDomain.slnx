@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="PolyDomain.Abstractions/PolyDomain.Abstractions.csproj" />
+  <Project Path="PolyDomain.Core.Tests/PolyDomain.Core.Tests.csproj" />
   <Project Path="PolyDomain.Core\PolyDomain.Core.csproj" />
-  <Project Path="PolyDomain.Tests\PolyDomain.Tests.csproj" />
+  <Project Path="PolyDomain.Infrastructure.EntityFrameworkCore.Tests/PolyDomain.Infrastructure.EntityFrameworkCore.Tests.csproj" />
   <Project Path="PolyDomain.Infrastructure.EntityFrameworkCore/PolyDomain.Infrastructure.EntityFrameworkCore.csproj" />
 </Solution>
